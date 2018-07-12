@@ -1,4 +1,5 @@
 import { WelcomePage } from '../pages/welcome/welcome';
+import { QuestionPage } from '../pages/question/question';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -22,7 +23,7 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
+      { title: 'Welcome', component: WelcomePage },
       { title: 'List', component: ListPage }
     ];
 

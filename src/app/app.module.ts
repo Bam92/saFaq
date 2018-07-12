@@ -3,30 +3,30 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
-import { WelcomePage } from '../pages/welcome/welcome';
+//import { HomePage } from '../pages/home/home';
+//import { ListPage } from '../pages/list/list';
+import { WelcomePageModule } from '../pages/welcome/welcome.module';
+import { QuestionPageModule } from '../pages/question/question.module';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 @NgModule({
-  declarations: [
-    MyApp,
-    HomePage,
-    ListPage,
-    WelcomePage
-  ],
+  declarations: [MyApp],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    WelcomePageModule,
+    QuestionPageModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    ListPage,
-    WelcomePage
+    //HomePage,
+    //ListPage,
+  //  WelcomePage,
+    //QuestionPage
   ],
   providers: [
     StatusBar,

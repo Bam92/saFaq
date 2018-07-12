@@ -1,0 +1,19 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Liste des questions</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let item of items" (click)="viewItem(item)">
+  <ion-card-content>
+    <ion-list>
+        <ion-item icon-left><ion-icon name="help-circle"></ion-icon>{{item.title}}</ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>
+
+</ion-content>

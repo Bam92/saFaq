@@ -23,7 +23,10 @@
   </ion-row>
   <ion-row>
     <ion-col col-2>
-      <button ion-button icon-left name="button" color="primary"><ion-icon name="arrow-forward"></ion-icon> Entrer</button>
+      <button ion-button icon-left (click)="findQuestions()" color="primary">
+        <ion-icon name="arrow-forward"></ion-icon>
+        Entrer
+      </button>
     </ion-col>
     <ion-col push-6 col-2>
       <button ion-button icon-left name="button" color="primary"><ion-icon name="power"></ion-icon> Quiter</button>
