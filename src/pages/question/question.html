@@ -8,11 +8,16 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card *ngFor="let item of items" (click)="viewItem(item)">
+  <ion-card *ngFor="let faq of faqs">
+    <ion-card-header>
+      <h2 icon-left><ion-icon name="help-circle"></ion-icon><strong>{{faq.q}}</strong></h2>
+    </ion-card-header>
   <ion-card-content>
-    <ion-list>
-        <ion-item icon-left><ion-icon name="help-circle"></ion-icon>{{item.title}}</ion-item>
-    </ion-list>
+    {{faq.a}}<!--
+    <ion-list *ngIf="faqs">
+        <ion-item icon-left *ngFor="let faq of faqs"><ion-icon name="help-circle"></ion-icon>{{faq.q}} et ici</ion-item>
+    </ion-list-->
+    <!--p *ngFor="let faq of faqs;">{{faq.q}} et ici</p-->
   </ion-card-content>
 </ion-card>
 
