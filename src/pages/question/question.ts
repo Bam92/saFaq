@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FaqApiProvider } from '../../providers/faq-api/faq-api';
+import { FaqDetailPage } from '../faq-detail/faq-detail';
 
 @IonicPage()
 @Component({
@@ -21,11 +22,9 @@ faqs = new Array();
     this.faqApiProvider.getFaqs().subscribe(data =>{
       this.faqs = data;
     })
-    /*this.items = [
-      {title: 'C\'est quoi ecole moderne', description: 'test1'},
-      {title: 'Qui est deriere ce projet', description: 'test2'},
-      {title: 'Quel en sont les modules', description: 'test3'}
-    ];*/
+  }
+  goToDetail(faq) {
+  this.navCtrl.push(FaqDetailPage);
   }
 
 }

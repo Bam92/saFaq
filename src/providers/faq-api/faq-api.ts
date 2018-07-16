@@ -16,8 +16,8 @@ private baseUrl: string = "../../assets/api/faq.json";
     console.log('Hello FaqApiProvider Provider');
   }
 
-  getFaqs(): Observable {
-  console.log("ici c faq.api" +this.http.get(`${this.baseUrl}`));
+  getFaqs(): Observable<any> {
+  //console.log("ici c faq.api" +this.http.get(`${this.baseUrl}`));
     return this.http.get(`${this.baseUrl}`);
   }
 
