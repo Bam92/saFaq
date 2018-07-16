@@ -1,8 +1,13 @@
 
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>Liste des questions</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>Toute la FAQ</ion-title>
+    <ion-buttons end>
+      <button ion-button incon-only style="font-size: 1.7em" (click)=toggleFavorite()>
+        <ion-icon [name]="more"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -10,10 +15,11 @@
 <ion-content padding>
   <ion-card *ngFor="let faq of faqs">
     <ion-card-header>
-      <h2 icon-left><ion-icon name="help-circle"></ion-icon><strong>{{faq.q}}</strong></h2>
+      <strong icon-left><ion-icon name="help-circle"></ion-icon>{{faq.q}}</strong>
     </ion-card-header>
   <ion-card-content>
-    {{faq.a}}<!--
+    {{ (faq.a.length>35)? (faq.a | slice:0:35)+'...':(faq.a) }}
+    <!--
     <ion-list *ngIf="faqs">
         <ion-item icon-left *ngFor="let faq of faqs"><ion-icon name="help-circle"></ion-icon>{{faq.q}} et ici</ion-item>
     </ion-list-->
