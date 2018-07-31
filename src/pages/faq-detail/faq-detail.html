@@ -7,14 +7,10 @@
 </ion-header>
 
 
-<ion-content padding>
-  <ion-card>
-    <ion-card-header>
-      <strong icon-left><ion-icon name="help-circle"></ion-icon>{{faq.q}}</strong>
-    </ion-card-header>
-  <ion-card-content>
-    {{ faq.a }}
-  </ion-card-content>
-  </ion-card>
+<ion-content padding *ngIf="faq">
+  <h3>{{faq.q}} ?</h3>
+ 
+  <p>{{ faq.a }}</p>
+
 
 </ion-content>

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-//import {  } from '../../providers/faq-api/faq-api';
-import { QuestionPage } from '../question/question';
+import { FaqApiProvider } from '../../providers/faq-api/faq-api';
+//import { QuestionPage } from '../question/question';
 
 @IonicPage()
 @Component({
@@ -10,11 +10,15 @@ import { QuestionPage } from '../question/question';
 })
 export class FaqDetailPage {
 faq;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    //private 
+  ) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad FaqDetailPage' + this.faq);
+    console.log('ionViewDidLoad FaqDetailPage ' + this.faq);
     this.faq = this.navParams.data;
   }
 

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FaqApiProvider } from '../../providers/faq-api/faq-api';
 import { FaqDetailPage } from '../faq-detail/faq-detail';
+import { AboutPage } from '../about/about';
 
 @IonicPage()
 @Component({
@@ -24,7 +25,11 @@ faqs = new Array();
     })
   }
   goToDetail(faq) {
-  this.navCtrl.push(FaqDetailPage);
+  this.navCtrl.push(FaqDetailPage, faq);
+  }
+
+  goToAbout(faq) {
+    this.navCtrl.push(AboutPage, faq);
   }
 
 }

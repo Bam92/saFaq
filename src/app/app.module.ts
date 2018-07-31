@@ -4,15 +4,13 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { HttpClientModule } from '@angular/common/http';
 
 import { MyApp } from './app.component';
-//import { HomePage } from '../pages/home/home';
-//import { ListPage } from '../pages/list/list';
 import { WelcomePageModule } from '../pages/welcome/welcome.module';
 import { QuestionPageModule } from '../pages/question/question.module';
 import { FaqDetailPageModule } from '../pages/faq-detail/faq-detail.module';
 import { AboutPageModule } from '../pages/about/about.module';
 /*import { WelcomePage } from '../pages/welcome/welcome';
 import { QuestionPage } from '../pages/question/question';*/
-import { FaqDetailPage } from '../pages/faq-detail/faq-detail';
+//import { FaqDetailPage } from '../pages/faq-detail/faq-detail';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -38,7 +36,7 @@ import { FaqApiProvider } from '../providers/faq-api/faq-api';
     //ListPage,
     //WelcomePage,
     //QuestionPage
-    FaqDetailPage
+    //FaqDetailPage
   ],
   providers: [
     StatusBar,
